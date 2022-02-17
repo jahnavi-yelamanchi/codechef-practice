@@ -7,11 +7,19 @@ int main() {
     long long int t;
     cin>>t;
     while(t--){
-        long long int u,v,a,s;
+        long long int u, v, a, s;
         cin>>u>>v>>a>>s;
-        if((u^2 + 2*a*s) <= v^2)
-            cout<<"yes\n";
-        else cout<<"no\n";
+	    
+        if(u<=v)
+            cout<<"Yes"<<endl;
+	    
+        else{
+            int sp = (u*u - 2*a*s);
+            if(sp<=v*v)
+                cout<<"Yes"<<endl;
+            else
+                cout<<"No"<<endl;
+        }
     }
 	return 0;
 }
